@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="ncprojectBus:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="ncprojectBus.war">
-      <element id="artifact" artifact-name="ncprojectBus:war exploded" />
-    </root>
-  </artifact>
-</component>
