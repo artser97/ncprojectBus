@@ -12,10 +12,13 @@ public class Schedule {
 
     public Schedule(){}
 
+<<<<<<< HEAD
     public Schedule(int busid) {
         this.busid = busid;
     }
 
+=======
+>>>>>>> origin
     public Schedule(int busid,int busroute,int busoperator,int busmodel,int tickets_av){
         this.busid = busid;
         this.busroute = busroute;

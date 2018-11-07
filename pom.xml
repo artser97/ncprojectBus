@@ -39,6 +39,7 @@
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
+<<<<<<< HEAD
 
         <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
         <dependency>
@@ -48,6 +49,8 @@
             <scope>provided</scope>
         </dependency>
 
+=======
+>>>>>>> origin
         <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/javax.servlet.jsp.jstl-api -->
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
@@ -95,9 +98,12 @@
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.7.0</version>
+<<<<<<< HEAD
                     <configuration>
                       <target>1.8</target>
                     </configuration>
+=======
+>>>>>>> origin
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>

@@ -7,21 +7,6 @@
 
     <display-name>ncprojectBus</display-name>
 
-<<<<<<< HEAD
-    <servlet>
-        <servlet-name>ControllerServlet</servlet-name>
-        <servlet-class>com.artser97.beans.ControllerServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ControllerServlet</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
-
-
-
-=======
->>>>>>> origin
     <welcome-file-list>
 
         <welcome-file>home</welcome-file>
