@@ -4,10 +4,12 @@
 <html>
 <head>
     <title>Bus Station App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 <center>
-    <h1>Books Management</h1>
+    <jsp:include page="_header.jsp"></jsp:include>
+    <h1 style="padding-top: 30px">BUS MANAGEMENT</h1>
     <h2>
         <a href="/new">Add New Bus</a>
         &nbsp;&nbsp;&nbsp;
@@ -22,7 +24,7 @@
         <c:if test="${schedule == null}">
         <form action="insert" method="post">
             </c:if>
-            <table border="1" cellpadding="5">
+            <table class="table table-hover">
                 <caption>
                     <h2>
                         <c:if test="${schedule != null}">
@@ -34,12 +36,11 @@
                     </h2>
                 </caption>
                 <c:if test="${schedule != null}">
-                    <input type="hidden" name="id" value="<c:out value='${book.id}' />" />
                 </c:if>
                 <tr>
                     <th>Bus number: </th>
                     <td>
-                        <input type="text" name="number" size="45"
+                        <input type="text" name="busid" size="45"
                                value="<c:out value='${schedule.busid}' />"
                         />
                     </td>
@@ -47,7 +48,7 @@
                 <tr>
                     <th>Bus route: </th>
                     <td>
-                        <input type="text" name="route" size="45"
+                        <input type="text" name="busroute" size="45"
                                value="<c:out value='${schedule.busroute}' />"
                         />
                     </td>
@@ -55,7 +56,7 @@
                 <tr>
                     <th>Operator: </th>
                     <td>
-                        <input type="text" name="operator" size="5"
+                        <input type="text" name="busoperator" size="5"
                                value="<c:out value='${schedule.busoperator}' />"
                         />
                     </td>
@@ -63,7 +64,7 @@
                 <tr>
                     <th>Bus model: </th>
                     <td>
-                        <input type="text" name="model" size="5"
+                        <input type="text" name="busmodel" size="5"
                                value="<c:out value='${schedule.busmodel}' />"
                         />
                     </td>
@@ -71,7 +72,7 @@
                 <tr>
                     <th>Tickets available: </th>
                     <td>
-                        <input type="text" name="price" size="5"
+                        <input type="text" name="tickets_av" size="5"
                                value="<c:out value='${schedule.tickets_av}' />"
                         />
                     </td>

@@ -61,7 +61,7 @@ public class ScheduleDAO {
     public List<Schedule> listAllSchedule() throws SQLException {
         List<Schedule> listSchedule = new ArrayList<>();
 
-        String sql = "SELECT * FROM ncprojectbus.bus_numbers join ncprojectbus.bus_routes on bus_numbers.route_id = bus_routes.id";
+        String sql = "SELECT bus_numbers.id,route_id,operator_id,vehicle_id,tickets_av,name FROM ncprojectbus.bus_numbers join ncprojectbus.bus_routes on bus_numbers.route_id = bus_routes.id join ncprojectbus.cities on bus_routes.dest = cities.id";
 
         connect();
 
@@ -74,8 +74,8 @@ public class ScheduleDAO {
             int busoperator = resultSet.getInt("operator_id");
             int busmodel = resultSet.getInt("vehicle_id");
             int tickets_av = resultSet.getInt("tickets_av");
-
-            Schedule schedule = new Schedule(busid, busroute, busoperator, busmodel, tickets_av);
+            String dest = resultSet.getString("name");
+            Schedule schedule = new Schedule(busid, busroute, busoperator, busmodel, tickets_av, dest);
             listSchedule.add(schedule);
         }
 

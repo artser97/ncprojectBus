@@ -17,7 +17,7 @@
     
  
        <center>
-    <h1>BUS SCHEDULE</h1>
+    <h1 style="padding-top: 20px">BUS SCHEDULE</h1>
     <h2>
         <a href="/new">Add New Bus</a>
         &nbsp;&nbsp;&nbsp;
@@ -34,6 +34,7 @@
             <th>Operator</th>
             <th>Bus Model</th>
             <th>Tickets Available</th>
+            <th>Destination</th>
         </tr>
         <c:forEach var="schedule" items="${listSchedule}">
             <tr>
@@ -42,6 +43,7 @@
                 <td><c:out value="${schedule.busoperator}" /></td>
                 <td><c:out value="${schedule.busmodel}" /></td>
                 <td><c:out value="${schedule.tickets_av}" /></td>
+                <td><c:out value="${schedule.dest}" /></td>
                 <td>
                     <a href="/edit?id=<c:out value='${schedule.busid}' />">Edit</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;

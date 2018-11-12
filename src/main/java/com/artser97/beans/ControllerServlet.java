@@ -84,28 +84,28 @@ public class ControllerServlet extends HttpServlet {
 
     private void insertSchedule(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
-        int busid = Integer.parseInt(request.getParameter("id"));
-        int busroute = Integer.parseInt(request.getParameter("route_id"));
-        int busoperator = Integer.parseInt(request.getParameter("operator_id"));
-        int busmodel = Integer.parseInt(request.getParameter("vehicle_id"));
+        int busid = Integer.parseInt(request.getParameter("busid"));
+        int busroute = Integer.parseInt(request.getParameter("busroute"));
+        int busoperator = Integer.parseInt(request.getParameter("busoperator"));
+        int busmodel = Integer.parseInt(request.getParameter("busmodel"));
         int tickets_av = Integer.parseInt(request.getParameter("tickets_av"));
 
         Schedule newSchedule = new Schedule(busid, busroute, busoperator,busmodel,tickets_av);
         scheduleDAO.insertSchedule(newSchedule);
-        response.sendRedirect("list");
+        response.sendRedirect("listSchedule");
     }
 
     private void updateSchedule(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException  {
-        int busid = Integer.parseInt(request.getParameter("id"));
-        int busroute = Integer.parseInt(request.getParameter("route_id"));
-        int busoperator = Integer.parseInt(request.getParameter("operator_id"));
-        int busmodel = Integer.parseInt(request.getParameter("vehicle_id"));
+        int busid = Integer.parseInt(request.getParameter("busid"));
+        int busroute = Integer.parseInt(request.getParameter("busroute"));
+        int busoperator = Integer.parseInt(request.getParameter("busoperator"));
+        int busmodel = Integer.parseInt(request.getParameter("busmodel"));
         int tickets_av = Integer.parseInt(request.getParameter("tickets_av"));
 
         Schedule newSchedule = new Schedule(busid, busroute, busoperator,busmodel,tickets_av);
         scheduleDAO.updateSchedule(newSchedule);
-        response.sendRedirect("list");
+        response.sendRedirect("listSchedule");
     }
 
     private void deleteSchedule(HttpServletRequest request, HttpServletResponse response)
@@ -114,7 +114,7 @@ public class ControllerServlet extends HttpServlet {
 
         Schedule schedule = new Schedule(busid);
         scheduleDAO.deleteSchedule(schedule);
-        response.sendRedirect("list");
+        response.sendRedirect("listSchedule");
 
     }
 }

@@ -9,16 +9,24 @@ public class Schedule {
     private int tickets_av;
     private String departure;
     private String arrival;
+    private String dest;
 
     public Schedule(){}
 
-<<<<<<< HEAD
     public Schedule(int busid) {
         this.busid = busid;
     }
 
-=======
->>>>>>> origin
+    public Schedule(int busid,int busroute,int busoperator,int busmodel,int tickets_av,String dest){
+        this.busid = busid;
+        this.busroute = busroute;
+        this.busoperator = busoperator;
+        this.busmodel = busmodel;
+        this.tickets_av = tickets_av;
+        this.dest = dest;
+
+    }
+
     public Schedule(int busid,int busroute,int busoperator,int busmodel,int tickets_av){
         this.busid = busid;
         this.busroute = busroute;
@@ -84,6 +92,13 @@ public class Schedule {
         this.arrival = arrival;
     }
 
+    public String getDest(){
+        return dest;
+    }
+
+    public void setDest(String arrival){
+        this.dest = dest;
+    }
 
 
 }
